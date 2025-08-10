@@ -22,12 +22,11 @@ C_original = [1, 0, 0, 0; 0, 1, 0, 0];
 m1 = 1; m2 = 1; l1 = 1; l2 = 1; g = 9.81;
 
 % Initial condition for simulation (a common starting point)
-% IMPORTANT: x0_sim must now be 6x1 to match nonlinear_dynamics_closed_loop's expectation
-x0_sim = [pi/2; -pi/2; 0; 0; 0; 0]; % Original states (4) + Integral states (2, initialized to 0)
+x0_sim = [pi/2; -pi/2; 0; 0; 0; 0]; 
 t_span_sim = [0 5]; % Simulation time
 
 % Define reference_value HERE, before it's used in ode_func_fast/slow
-reference_value = [0;0]; % For stabilization, reference is zero (as per previous problem context)
+reference_value = [0;0]; % For stabilization, reference is zero 
 
 % For pole placement, A_aug_controller and B_aug_controller are needed
 A_aug_controller = [A, zeros(size(A,1), size(C_original,1)); 
@@ -146,4 +145,5 @@ hold on;
 plot(t_slow, tau_slow(:,2), 'r--', 'LineWidth', 1.5);
 title('Control Input \tau_2');
 xlabel('Time (s)'); ylabel('Torque (Nm)');
+
 legend('Fast Poles', 'Slow Poles', 'Location', 'best'); grid on;
