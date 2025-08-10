@@ -2,9 +2,9 @@
 
 This part of the project analyzes the fundamental properties of the linearized system: controllability and observability. These scripts verify whether the system can be steered to any desired state using a control input and whether all system states can be inferred from the output.
 
-The analysis is performed on the state-space matrices.
+- The analysis is performed on the state-space matrices.
 
-Three different methods are used to perform the analysis, providing a robust verification of the results.
+- Three different methods are used to perform the analysis, providing a robust verification of the results.
 
 1. Analysis using ctrb and obsv Matrices
 File: Cont_Obs_using_matrices.m
