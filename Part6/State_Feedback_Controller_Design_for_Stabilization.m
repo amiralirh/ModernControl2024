@@ -1,12 +1,12 @@
 %==========================================================================
-% State-Feedback Controller Design for Stabilization (Updated for 6-state system)
+% State-Feedback Controller Design for Stabilization
 %==========================================================================
 
 clc;
 clear;
 close all;
 
-% 1. Define the Linearized System Matrices (from Feedback Linearization)
+% 1. Define the Linearized System Matrices
 A = [0, 0, 1, 0;
      0, 0, 0, 1;
      0, 0, 0, 0;
@@ -134,4 +134,5 @@ hold on;
 plot(t_lin, x_cl_lin2_aug(:,4), 'r--', 'LineWidth', 1.5);
 title('Linearized System - IC2 (Velocities)');
 xlabel('Time (s)'); ylabel('Angular Velocity (rad/s)');
+
 legend('d\theta_1', 'd\theta_2'); grid on;
