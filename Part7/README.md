@@ -2,6 +2,8 @@
 
 This script, Comparing_Different_Desired_Pole_Locations.m, is designed to demonstrate the critical relationship between the choice of desired closed-loop pole locations and the resulting system performance and control effort. It compares two state-feedback controllers, one designed for a fast response and one for a slower, more conservative response.
 
+This function, feedback_linearization, implements the core feedback linearization control law for the nonlinear system. It translates a synthetic control input, v_synthetic, into the actual control torques, tau, needed to drive the physical system. This method effectively cancels the nonlinearities of the system (e.g., inertia, Coriolis, and gravity) to create a linear relationship between the input and the system dynamics.
+
  # Methodology
 
 1. Controller Design: The script defines two sets of desired poles for the augmented system.
