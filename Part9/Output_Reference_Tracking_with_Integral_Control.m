@@ -63,7 +63,6 @@ x0_aug_sim = [x0_original; x0_integral_error];
 
 % 7. Simulate the Closed-Loop Nonlinear System with Integral Control
 disp('Simulating Closed-Loop Nonlinear System with Integral Control...');
-% The anonymous function now passes K_aug, reference_value, and physical parameters
 ode_func_integral_tracking = @(t, x_aug) nonlinear_dynamics_closed_loop(t, x_aug, K_aug, reference_value, m1, m2, l1, l2, g);
 [t_track_int, x_track_int] = ode45(ode_func_integral_tracking, t_span_sim, x0_aug_sim);
 
@@ -106,7 +105,6 @@ xlabel('Time (s)'); ylabel('Integral of Error (rad.s)');
 legend('show'); grid on; box on;
 
 % Optionally plot control input tau (requires calculation in the loop)
-% Re-calculate tau for plotting using the K_aug and x_aug_sim results
 tau_track_int = zeros(size(x_track_int, 1), 2);
 for i = 1:size(x_track_int, 1)
     current_x_aug = x_track_int(i,:)';
@@ -122,4 +120,5 @@ hold on;
 plot(t_track_int, tau_track_int(:,2), 'r--', 'LineWidth', 1.5, 'DisplayName', '\tau_2');
 title('Control Input \tau');
 xlabel('Time (s)'); ylabel('Torque (Nm)');
+
 legend('show'); grid on; box on;
