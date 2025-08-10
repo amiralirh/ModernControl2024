@@ -5,10 +5,10 @@ This main script analyzes the open-loop performance of the nonlinear system by a
 # Script Workflow
 The script performs the following actions:
 
-1.Defines the physical parameters and initial conditions for the system.
+1. Defines the physical parameters and initial conditions for the system.
 
-2.Simulates the system's behavior for each of the three input types.
+2. Simulates the system's behavior for each of the three input types.
 
-3.Utilizes MATLAB's ode45 solver to integrate the system's differential equations.
+3. Utilizes MATLAB's ode45 solver to integrate the system's differential equations.
 
-4.Generates three separate plots to visualize the system's response to each input.
+4. Generates three separate plots to visualize the system's response to each input.
