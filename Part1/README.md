@@ -6,10 +6,10 @@ main script performs a complete open-loop simulation of the non-linear system. I
 
 # Script Workflow
 
-1.Parameter Definition: Defines the physical parameters of the system.
+1. Parameter Definition: Defines the physical parameters of the system.
 
-2.Initial Conditions: Sets the initial state of the system .
+2. Initial Conditions: Sets the initial state of the system .
 
-3.Simulation: Uses MATLAB's ode45 solver to solve the differential equations defined in nonlinear_dynamics.m over a specified time span.
+3. Simulation: Uses MATLAB's ode45 solver to solve the differential equations defined in nonlinear_dynamics.m over a specified time span.
 
-4.Data Visualization: Plots the simulation results to analyze the system's behavior under different initial conditions.
+4. Data Visualization: Plots the simulation results to analyze the system's behavior under different initial conditions.
