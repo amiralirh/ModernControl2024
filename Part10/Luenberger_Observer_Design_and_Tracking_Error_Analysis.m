@@ -31,7 +31,6 @@ disp('Augmented State-Feedback Gain Matrix K_aug (Controller):');
 disp(K_aug);
 
 % 4. Observer Design (L for ORIGINAL 4 states)
-% We design observer for A, C_original pair (4 states, 2 outputs)
 % Choose desired observer poles (faster than controller poles, e.g., -5 to -10)
 % Need 4 observer poles for original states
 desired_observer_poles = [-5, -5.1, -5.2, -5.3]; 
@@ -132,4 +131,5 @@ hold on;
 plot(t_sim_obs, error_estimation(:,4), 'r--', 'LineWidth', 1.5, 'DisplayName', 'Error d\theta_2');
 title('Estimation Error (Velocities)');
 xlabel('Time (s)'); ylabel('Error (rad/s)');
+
 legend('show'); grid on; box on;
