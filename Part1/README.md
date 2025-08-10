@@ -1,10 +1,10 @@
-#Part1
+# Part1
 
 This function, named nonlinear_dynamics, defines the non-linear differential equations for the system. It is the core of the simulation, providing the time derivative of the state vector.
 
 main script performs a complete open-loop simulation of the non-linear system. It is responsible for setting up the simulation, solving the differential equations, and visualizing the results.
 
-Script Workflow
+# Script Workflow
 
 1.Parameter Definition: Defines the physical parameters of the system.
 
