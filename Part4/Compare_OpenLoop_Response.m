@@ -39,8 +39,6 @@ u_linearized = zeros(length(t_linear), 2);
 %==========================================================================
 % 1. Simulate the Nonlinear System
 %==========================================================================
-% Use the 'nonlinear_dynamics' function from the previous response.
-% Make sure the function file is in the same directory.
 disp('Simulating Nonlinear System...');
 [t_nonlinear, x_nonlinear] = ode45(@(t, x) nonlinear_dynamics(t, x, u_nonlinear), t_span, x0_nonlinear);
 
@@ -83,4 +81,5 @@ xlabel('Time (s)');
 ylabel('Angular Velocity (rad/s)');
 legend('dtheta1 (Nonlinear)', 'dtheta2 (Nonlinear)', 'dtheta1 (Linearized)', 'dtheta2 (Linearized)');
 grid on;
+
 box on;
