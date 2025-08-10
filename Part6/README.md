@@ -1,4 +1,8 @@
 # Part6
+
+File: nonlinear_dynamics_closed_loop.m
+This function, nonlinear_dynamics_closed_loop, calculates the time derivative of the state vector for the closed-loop nonlinear system. It is designed to be used with MATLAB's ode45 solver to simulate the system's behavior when a state-feedback controller with integral action is applied.
+
 File: State_Feedback_Controller_Design_for_Stabilization.m
 This script designs a state-feedback controller for stabilizing a linearized system, specifically a two-link robotic arm. The controller is designed using the pole placement method to ensure the closed-loop system is stable. The code then simulates both the linearized and the original nonlinear system to evaluate the controller's performance under different initial conditions.
 
