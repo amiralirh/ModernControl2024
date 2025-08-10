@@ -7,12 +7,12 @@ In this project, the linearization is performed around the equilibrium point (x=
 
 # Script Workflow
 
-1.Defines the nonlinear system's equations and parameters.
+1. Defines the nonlinear system's equations and parameters.
 
-2.Specifies the operating point for linearization.
+2. Specifies the operating point for linearization.
 
-3.Calculates the Jacobian matrices of the system dynamics with respect to the state vector and the control input.
+3. Calculates the Jacobian matrices of the system dynamics with respect to the state vector and the control input.
 
-4.Derives the linear state-space matrices A and B.
+4. Derives the linear state-space matrices A and B.
 
-5.Displays the resulting matrices, providing a linear representation of the system's behavior near the equilibrium point.
+5. Displays the resulting matrices, providing a linear representation of the system's behavior near the equilibrium point.
