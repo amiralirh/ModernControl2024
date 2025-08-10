@@ -38,7 +38,7 @@ disp(K_aug);
 % Define reference value for tracking (even if target is zero for stabilization initially)
 reference_value = [0; 0]; % For stabilization, reference is zero
 
-% 5. Simulate Closed-Loop Linearized System (No changes needed for this part, as it's separate)
+% 5. Simulate Closed-Loop Linearized System 
 disp('Simulating Closed-Loop Linearized System...');
 A_cl = A_aug_controller - B_aug_controller*K_aug; % Closed-loop system matrix for augmented system
 sys_cl_lin = ss(A_cl, B_aug_controller, eye(size(A_cl,1)), 0); % Output all augmented states
@@ -56,7 +56,7 @@ x0_cl_lin2_aug = [0.1; 0.2; -0.05; 0.1; 0; 0]; % Original states + 2 zeros for i
 [~, ~, x_cl_lin2_aug] = lsim(sys_cl_lin, u_zero, t_lin, x0_cl_lin2_aug);
 
 
-% 6. Simulate Closed-Loop Nonlinear System (using the new self-contained function)
+% 6. Simulate Closed-Loop Nonlinear System 
 disp('Simulating Closed-Loop Nonlinear System...');
 
 % Initial Condition Set 1 for NONLINEAR system (augmented 6 states)
@@ -136,3 +136,4 @@ title('Linearized System - IC2 (Velocities)');
 xlabel('Time (s)'); ylabel('Angular Velocity (rad/s)');
 
 legend('d\theta_1', 'd\theta_2'); grid on;
+
